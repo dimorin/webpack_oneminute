@@ -42,9 +42,19 @@ module.exports = {
 	},
 	module: {
 		rules: [
-            {
+            /* {
                 test: /\.css$/i,
                 use:[MiniCssExtractPlugin.loader, "css-loader"],
+            }, */
+            {
+                test: /\.(scss|css)$/, //.css 확장자로 끝나는 모든 파일
+                use: [
+                  process.env.NODE_ENV === "production"
+                    ? MiniCssExtractPlugin.loader
+                    : "style-loader",
+                  "css-loader",
+                  "sass-loader",
+                ],
             },
 			{
 				test: /\.js$/,

@@ -14,10 +14,13 @@ https://velog.io/@khw970421/Webpack-5%EC%9E%A5-output-%EC%97%AC%EB%9F%AC%ED%8C%8
 Webpack - 7. output 설정
 https://youtu.be/dt2xU71pX88
 
+MiniCssExtractPlugin
+https://webpack.js.org/plugins/mini-css-extract-plugin/#minimal-example
+
 1. 패키지 설치
 터미널에 아래 점선 사이의 내용을 붙여 넣고 엔터를 누르세요.
 ----------
-npm i -D @babel/cli @babel/core @babel/preset-env babel-loader clean-webpack-plugin copy-webpack-plugin core-js cross-env html-webpack-plugin source-map-loader terser-webpack-plugin webpack webpack-cli webpack-dev-server
+npm i -D @babel/cli @babel/core @babel/preset-env babel-loader clean-webpack-plugin copy-webpack-plugin core-js cross-env html-webpack-plugin source-map-loader terser-webpack-plugin webpack webpack-cli webpack-dev-server css-loader mini-css-extract-plugin
 ----------
 
 2. 개발용 서버 구동

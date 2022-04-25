@@ -1,3 +1,4 @@
+import 'bootstrap';
 import {message} from './message';
 import '../css/sub1.scss';
 

@@ -7,13 +7,24 @@
     <title><%= htmlWebpackPlugin.options.title %></title>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="./index.html">index</a></li>
-            <li><a href="./sub1.html">sub1</a></li>
-            <li><a href="./sub2.html">sub2</a></li>
-        </ul>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link" href="./index.html">index</a>
+                    <a class="nav-link active" aria-current="page" href="./sub1.html">sub1</a>
+                    <a class="nav-link" href="./sub2.html">sub2</a>
+                </div>
+            </div>
+        </div>
     </nav>
-    <h1>sub1</h1>
+    <div class="container text-center">
+        <h1>sub1</h1>
+    </div>    
 </body>
 </html>

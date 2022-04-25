@@ -2,6 +2,18 @@
 https://github.com/jmyoow/webpack-js-html
 https://youtu.be/pzHMT9Jxce0
 
+html별로 js 만들기
+https://github.com/dimorin/webpack-js-html
+
+여러 html을 각각 번들링 하기
+https://choiyb2.tistory.com/96
+
+output - 여러파일 번들링
+https://velog.io/@khw970421/Webpack-5%EC%9E%A5-output-%EC%97%AC%EB%9F%AC%ED%8C%8C%EC%9D%BC-%EB%B2%88%EB%93%A4%EB%A7%81
+
+Webpack - 7. output 설정
+https://youtu.be/dt2xU71pX88
+
 1. 패키지 설치
 터미널에 아래 점선 사이의 내용을 붙여 넣고 엔터를 누르세요.
 ----------

@@ -9,12 +9,15 @@ const webpackMode = process.env.NODE_ENV || 'development';
 
 module.exports = {
 	mode: webpackMode,
+    // 각 html에 필요한 entry 파일
 	entry: {
 		main: './src/js/main.js',
+        sub1: './src/js/sub1.js',
+        sub2: './src/js/sub2.js',
 	},
 	output: {
 		path: path.resolve('./dist/'),
-		filename: './js/[name].min.js'
+		filename: './js/[name].min.js', // entry에 선언된 객체의 각 프로퍼티가 [name]과 치환되어 파일이 생성
 	},
 	// es5로 빌드 해야 할 경우 주석 제거
 	// 단, 이거 설정하면 webpack-dev-server 3번대 버전에서 live reloading 동작 안함
@@ -51,8 +54,31 @@ module.exports = {
 		]
 	},
 	plugins: [
-		new HtmlWebpackPlugin({
+		new HtmlWebpackPlugin({ // HTML을 동적으로 생성, 따로 분리하여 번들한 js 파일을 자동으로 추가해준다.
+            title: 'webpack main',
 			template: './src/index.html',
+            filename:'index.html',
+            excludeChunks:['sub1','sub2'], // excludeChunks를 제외한 나머지 entry를 묶으라
+			minify: process.env.NODE_ENV === 'production' ? {
+				collapseWhitespace: true,
+				removeComments: true,
+			} : false
+		}),
+        new HtmlWebpackPlugin({ // HTML을 동적으로 생성, 따로 분리하여 번들한 js 파일을 자동으로 추가해준다.
+            title: 'webpack sub1',
+			template: './src/sub1.html',
+            filename:'sub1.html',
+            chunks:['sub1'], // 번들된 파일 중에 어떤 것을 html 파일에 포함시킬 건지
+			minify: process.env.NODE_ENV === 'production' ? {
+				collapseWhitespace: true,
+				removeComments: true,
+			} : false
+		}),
+        new HtmlWebpackPlugin({ // HTML을 동적으로 생성, 따로 분리하여 번들한 js 파일을 자동으로 추가해준다.
+            title: 'webpack sub2',
+			template: './src/sub2.html',
+            filename:'sub2.html',
+            chunks:['sub2'], // 번들된 파일 중에 어떤 것을 html 파일에 포함시킬 건지
 			minify: process.env.NODE_ENV === 'production' ? {
 				collapseWhitespace: true,
 				removeComments: true,

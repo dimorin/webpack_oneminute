@@ -10,11 +10,11 @@ const webpackMode = process.env.NODE_ENV || 'development';
 module.exports = {
 	mode: webpackMode,
 	entry: {
-		main: './src/main.js',
+		main: './src/js/main.js',
 	},
 	output: {
-		path: path.resolve('./dist'),
-		filename: '[name].min.js'
+		path: path.resolve('./dist/'),
+		filename: './js/[name].min.js'
 	},
 	// es5로 빌드 해야 할 경우 주석 제거
 	// 단, 이거 설정하면 webpack-dev-server 3번대 버전에서 live reloading 동작 안함
@@ -66,8 +66,8 @@ module.exports = {
 		// 그대로 사용할 파일들이 없다면 CopyWebpackPlugin을 통째로 주석 처리 해주세요.
 		new CopyWebpackPlugin({
 			patterns: [
-				{ from: "./src/style.css", to: "./style.css" },
-				{ from: "./src/images", to: "./images" },
+				{ from: "./src/css", to: "./css" },
+				{ from: "./src/img", to: "./img" },
 			],
 		})
 	]

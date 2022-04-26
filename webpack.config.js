@@ -99,6 +99,24 @@ module.exports = {
 				removeComments: true,
 			} : false
 		}),
+		new HtmlWebpackPlugin({ // HTML을 동적으로 생성, 따로 분리하여 번들한 js 파일을 자동으로 추가해준다.
+			template: './src/header.html',
+            filename:'header.html',
+            chunks:[], // 번들된 파일 중에 어떤 것을 html 파일에 포함시킬 건지
+			minify: process.env.NODE_ENV === 'production' ? {
+				collapseWhitespace: true,
+				removeComments: true,
+			} : false
+		}),
+		new HtmlWebpackPlugin({ // HTML을 동적으로 생성, 따로 분리하여 번들한 js 파일을 자동으로 추가해준다.
+			template: './src/nav.html',
+            filename:'nav.html',
+            chunks:[], // 번들된 파일 중에 어떤 것을 html 파일에 포함시킬 건지
+			minify: process.env.NODE_ENV === 'production' ? {
+				collapseWhitespace: true,
+				removeComments: true,
+			} : false
+		}),
         new MiniCssExtractPlugin({
             filename:"./css/[name].css",
         }),

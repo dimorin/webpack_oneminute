@@ -2,17 +2,15 @@
 https://github.com/jmyoow/webpack-js-html
 https://youtu.be/pzHMT9Jxce0
 
-html별로 js 만들기
-https://github.com/dimorin/webpack-js-html
+html별로 js 만들기 참고 링크
+① https://github.com/dimorin/webpack-js-html
+② 여러 html을 각각 번들링 하기 https://choiyb2.tistory.com/96
+③ output - 여러파일 번들링 https://velog.io/@khw970421/Webpack-5%EC%9E%A5-output-%EC%97%AC%EB%9F%AC%ED%8C%8C%EC%9D%BC-%EB%B2%88%EB%93%A4%EB%A7%81
+④ Webpack - 7. output 설정 https://youtu.be/dt2xU71pX88
+⑤ https://github.com/puikinsh/Adminator-admin-dashboard/blob/master/webpack/plugins/htmlPlugin.js
 
-여러 html을 각각 번들링 하기
-https://choiyb2.tistory.com/96
-
-output - 여러파일 번들링
-https://velog.io/@khw970421/Webpack-5%EC%9E%A5-output-%EC%97%AC%EB%9F%AC%ED%8C%8C%EC%9D%BC-%EB%B2%88%EB%93%A4%EB%A7%81
-
-Webpack - 7. output 설정
-https://youtu.be/dt2xU71pX88
+webpack.config.js 정리 참고링크
+https://github.com/puikinsh/Adminator-admin-dashboard
 
 MiniCssExtractPlugin
 https://webpack.js.org/plugins/mini-css-extract-plugin/#minimal-example
